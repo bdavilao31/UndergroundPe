@@ -16,7 +16,7 @@ const Main = () => {
   }, []);
 
   return (
-    <main>
+    <main style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
       <Carousel>
         {
           Fotos.map(it => (
@@ -26,18 +26,25 @@ const Main = () => {
               <img className='w-100 dark-image' src={it.picture} alt={it.name}></img>
               <Carousel.Caption>
                 <h3>{it.name}</h3>
-                <button className="btn btn-primary">Ver detalle</button>
+                <button className="btn btn-primary" style={{ backgroundColor: '#FF4500', color: '#FFFFFF', borderColor: '#FF4500' }}>Ver detalle</button>
               </Carousel.Caption>
             </Carousel.Item>
           ))
         }
       </Carousel>
 
+      <div className="text-center py-5 my-5" style={{ backgroundColor: '#f8f9fa', color: '#000000' }}>
+        <h2 className="fw-bold mb-4" style={{ color: '#FF4500' }}>Descubre lo que te ofrece UndergroundPe</h2>
+        <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: '18px' }}>
+        En UndergroundPe, te ofrecemos lo último en colaboraciones exclusivas con artistas urbanos y las zapatillas más originales. Nuestra colección cuidadosamente seleccionada destaca la creatividad y la calidad, garantizando que cada par de zapatillas no solo complementa tu estilo, sino que también cuenta una historia única. Vive tu pasión por la moda y el diseño con cada paso, descubriendo ediciones limitadas y piezas únicas que te diferenciarán del resto.
+        </p>
+      </div>
+
       <div className="py-5">
         <div className="container text-center">
           <div className="row">
             <div className="col-md-4 d-flex align-items-stretch">
-              <div className="card mb-4 shadow" style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
+              <div className="card mb-4 shadow" style={{ backgroundColor: '#f8f9fa', color: '#000000' }}>
                 <div className="card-body text-center">
                   <i className="bi bi-grid-3x3-gap-fill" style={{ fontSize: '2rem', color: '#8AEA91' }}></i>
                   <h5 className="card-title mt-3">Variedad Inigualable</h5>
@@ -46,7 +53,7 @@ const Main = () => {
               </div>
             </div>
             <div className="col-md-4 d-flex align-items-stretch">
-              <div className="card mb-4 shadow" style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
+              <div className="card mb-4 shadow" style={{ backgroundColor: '#f8f9fa', color: '#000000' }}>
                 <div className="card-body text-center">
                   <i className="bi bi-shield-check" style={{ fontSize: '2rem', color: '#8AEA91' }}></i>
                   <h5 className="card-title mt-3">Autenticidad Garantizada</h5>
@@ -55,7 +62,7 @@ const Main = () => {
               </div>
             </div>
             <div className="col-md-4 d-flex align-items-stretch">
-              <div className="card mb-4 shadow" style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
+              <div className="card mb-4 shadow" style={{ backgroundColor: '#f8f9fa', color: '#000000' }}>
                 <div className="card-body text-center">
                   <i className="bi bi-heart-fill" style={{ fontSize: '2rem', color: '#8AEA91' }}></i>
                   <h5 className="card-title mt-3">Pasión por las Zapatillas</h5>

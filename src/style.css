@@ -1,0 +1,119 @@
+
+
+.aside-container {
+    background-color: #5F5566;
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .aside-container h2 {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+  }
+  
+  .aside-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .aside-container .form-label {
+    font-weight: bold;
+  }
+  
+  .aside-container .form-control {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+  
+  .aside-container .btn {
+    background-color: #8AEA91;
+    border-color: #8AEA91;
+    color: #000000;
+  }
+  
+  .aside-container .text-center {
+    margin-top: 20px;
+  }
+  
+  .aside-container .btn-outline-light {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+  }
+  
+  .aside-container .btn-outline-light:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+  
+
+/* Efecto Hover para los Botones */
+.btn-outline-light:hover {
+    background-color: #FF4500;
+    border-color: #FF4500;
+    color: #FFFFFF;
+  }
+
+  /* Efecto Hover para los Botones */
+.btn-outline-light:hover {
+    background-color: #FF4500;
+    border-color: #FF4500;
+    color: #FFFFFF;
+  }
+  
+  /* Aside (Barra Lateral) */
+  .aside-container {
+    background-color: #D3D3D3;
+    color: #000000;
+    padding: 20px;
+  }
+  .aside-container a {
+    color: #1E90FF;
+  }
+  .aside-container a:hover {
+    color: #FF6347;
+  }
+  
+
+
+/* Main (Contenido Principal) */
+main {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+  main a {
+    color: #1E90FF;
+  }
+  main a:hover {
+    color: #FF6347;
+  }
+  button.btn-primary {
+    background-color: #FF4500;
+    border-color: #FF4500;
+    color: #FFFFFF;
+  }
+  button.btn-primary:hover {
+    background-color: #FF6347;
+    border-color: #FF6347;
+  }
+  
+  /* Sección de Introducción */
+  .intro-section {
+    background-color: #f8f9fa;
+    color: #000000;
+    padding: 40px 0;
+  }
+  .intro-section h2 {
+    color: #FF4500;
+  }
+  .intro-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+  
