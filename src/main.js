@@ -1,51 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { useNavigate } from "react-router-dom";
-import Fotos from './data/fotos.json'
+import Fotos from './data/fotos.json';
+import feather from 'feather-icons';
 
 const Main = () => {
-  return (
-    <main className="col-md-8" style={{ backgroundColor: '#8AEA91', padding: '10px', borderRadius: '8px' }}>
-      <div className="pt-3 pb-3">
-        <div className="container text-center">
-          <h2 className="fw-bold mb-3" style={{ color: '#000000', marginTop: '0' }}>Descubre lo que te ofrece UndergroundPe</h2>
-        </div>
-      </div>
+  const navigate = useNavigate();
 
+  const handleClick = (slug) => {
+    navigate("/detalle/" + slug);
+  }
+
+  useEffect(() => {
+    feather.replace();
+  }, []);
+
+  return (
+    <main>
       <Carousel>
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100"
-            src="https://media.gq.com.mx/photos/63f660d6f57c61d24bf508b9/16:9/w_2560%2Cc_limit/tenis-adidas-originals-x-bad-bunny-campus-light-caracteristicas-fecha-de-lanzamiento.jpg"
-            alt="Adidas x Bad Bunny - Campus Ligth"
-            style={{ height: '500px', objectFit: 'cover' }}
-          />
-          <Carousel.Caption>
-            <h3>Adidas x Bad Bunny - Campus Ligth</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            className="d-block w-100"
-            src="https://www.21exclusives.com/cdn/shop/products/air-jordan-4-military-black-dh6927-111-release-date.jpg?v=1668059923"
-            alt="Jordan Retro 4 - Military" 
-            style={{ height: '500px', objectFit: 'cover' }}
-          />
-          <Carousel.Caption>
-            <h3>Jordan Retro 4 - Military</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://store.yankeekicks.com/cdn/shop/products/Travis-Scott-Nike-SB-Dunk-Low-CT5053-001-Release-Date-Price-4_4f7427b8-a556-4e86-a0ae-7d753695c2c3.jpg?v=1707416579"
-            alt="Travis Scott x Nike SB Dunk"
-            style={{ height: '500px', objectFit: 'cover' }}
-          />
-          <Carousel.Caption>
-            <h3>Travis Scott x Nike SB Dunk</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
+        {
+          Fotos.map(it => (
+            <Carousel.Item key={it.slug} onClick={(e) => {
+              e.preventDefault(); handleClick(it.slug)
+            }}>
+              <img className='w-100 dark-image' src={it.picture} alt={it.name}></img>
+              <Carousel.Caption>
+                <h3>{it.name}</h3>
+                <button className="btn btn-primary">Ver detalle</button>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))
+        }
       </Carousel>
 
       <div className="py-5">
@@ -107,5 +92,3 @@ const Main = () => {
 }
 
 export default Main;
-
-

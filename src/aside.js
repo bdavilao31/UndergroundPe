@@ -1,94 +1,65 @@
 import React, { useEffect } from 'react';
-import feather from 'feather-icons';
+const feather = require('feather-icons');
+import './style.css';
+
+setTimeout(() => {
+  feather.replace();
+}, 1000);
 
 const Aside = () => {
-  useEffect(() => {
-    feather.replace();
-  }, []);
-
-  const buttonStyle = {
-    color: '#FFFFFF',
-    borderColor: '#FFFFFF',
-    transition: 'background-color 0.3s, color 0.3s',
-  };
-
-  const buttonHoverStyle = {
-    backgroundColor: '#000000',
-    color: '#FFFFFF',
-  };
-
   return (
-    <aside className="col-md-4 p-4" style={{ backgroundColor: '#5F5566', color: '#FFFFFF', borderRadius: '8px' }}>
-      <h2 className="d-flex justify-content-center align-items-center mb-4">
-        Registro de Usuario
-      </h2>
+    <aside className="aside-container">
       <form>
         <div className="mb-3">
-          <label htmlFor="firstName" className="form-label">
-            <i data-feather="user" className="me-2"></i>
-            Nombre
+          <label htmlFor="exampleDropdownFormEmail1" className="form-label">
+            Correo Electrónico
           </label>
-          <input type="text" className="form-control" id="firstName" placeholder="Ingrese su nombre" style={{ color: '#000000' }} />
+          <input
+            type="email"
+            className="form-control"
+            id="exampleDropdownFormEmail1"
+            placeholder="email@example.com"
+          />
         </div>
-        
         <div className="mb-3">
-          <label htmlFor="lastName" className="form-label">
-            <i data-feather="user" className="me-2"></i>
-            Apellido
-          </label>
-          <input type="text" className="form-control" id="lastName" placeholder="Ingrese su apellido" style={{ color: '#000000' }} />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            <i data-feather="mail" className="me-2"></i>
-            Correo
-          </label>
-          <input type="email" className="form-control" id="email" placeholder="ejemplo@gmail.com" required style={{ color: '#000000' }} />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="phone" className="form-label">
-            <i data-feather="phone" className="me-2"></i>
-            Número de Celular
-          </label>
-          <div className="d-flex">
-            <span className="input-group-text" style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>+51</span>
-            <input type="tel" className="form-control" id="phone" placeholder="999999999" style={{ color: '#000000' }} />
-          </div>
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
-            <i data-feather="lock" className="me-2"></i>
+          <label htmlFor="exampleDropdownFormPassword1" className="form-label">
             Contraseña
           </label>
-          <input type="password" className="form-control" id="password" placeholder="Ingrese su contraseña" style={{ color: '#000000' }} />
+          <input
+            type="password"
+            className="form-control"
+            id="exampleDropdownFormPassword1"
+            placeholder="Password"
+          />
         </div>
-
-        <button type="submit" className="btn btn-primary d-block w-100 mb-3" style={{ backgroundColor: '#8AEA91', borderColor: '#8AEA91', color: '#000000' }}>
-          <i data-feather="send" className="me-2"></i>
-          Registrarse
+        <div className="form-check mb-3">
+          <input
+            type="checkbox"
+            className="form-check-input"
+            id="dropdownCheck"
+          />
+          <label className="form-check-label" htmlFor="dropdownCheck">
+            Remember me
+          </label>
+        </div>
+        <button type="submit" className="btn btn-primary w-100 mb-3">
+          Sign in
         </button>
+        <div className="dropdown-divider"></div>
+        <a className="dropdown-item" href="#">
+          New around here? Sign up
+        </a>
+        <a className="dropdown-item" href="#">
+          Forgot password?
+        </a>
+        <div className="icons-right">
+          <i data-feather="bell"></i>
+          <i data-feather="navigation"></i>
+          <i data-feather="paperclip"></i>
+          <i data-feather="trash-2"></i>
+          <i data-feather="info"></i>
+        </div>
       </form>
-      <div className="text-center">
-        <p>¿Ya tienes una cuenta?</p>
-        <button
-          className="btn btn-outline-light"
-          style={buttonStyle}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor;
-            e.currentTarget.style.color = buttonHoverStyle.color;
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '';
-            e.currentTarget.style.color = buttonStyle.color;
-          }}
-          aria-label="Iniciar Sesión"
-        >
-          <i data-feather="log-in" className="me-1"></i> Iniciar Sesión
-        </button>
-      </div>
     </aside>
   );
 }
