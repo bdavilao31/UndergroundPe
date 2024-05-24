@@ -80,14 +80,26 @@ const Aside = () => {
             style={{ color: '#000000' }}
           />
         </div>
+        
+        <div className="text-center mt-4">
         <button
-          type="submit"
-          className="btn btn-primary d-block w-100 mb-3"
-          style={{borderColor: '#FF6347', color: '#000000' }}
+          className="btn btn-outline-light"
+          style={buttonStyle}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor;
+            e.currentTarget.style.color = buttonHoverStyle.color;
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '';
+            e.currentTarget.style.color = buttonStyle.color;
+          }}
+          aria-label="Registrarse"
         >
-          <i data-feather="send" className="me-2"></i>
-          Registrarse
+          <i data-feather="fas fa-user-plus" className="me-1"></i> Registrase
         </button>
+
+        
+      </div>
 
         <button
           type="button"
