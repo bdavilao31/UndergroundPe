@@ -12,9 +12,15 @@ const Header = () => {
         UndergroundPE
       </a>
       <nav className="d-flex align-items-center">
-        <button className="btn btn-outline-light me-2" style={{ borderColor: '#FF6347', color: '#FF6347' }} aria-label="Inicio">
-          <i data-feather="home" className="me-1"></i> Inicio
-        </button>
+      <button 
+  className="btn btn-outline-light me-2" 
+  style={{ borderColor: '#FF6347', color: '#FF6347' }} 
+  aria-label="Inicio"
+  onClick={() => window.location.href = '/inicio'}
+>
+  <i data-feather="home" className="me-1"></i> <a className='Inicio' href='/#'>Inicio</a>
+</button>
+
         <button className="btn btn-outline-light me-2" style={{ borderColor: '#FF6347', color: '#FF6347' }} aria-label="Productos">
           <i data-feather="shopping-bag" className="me-1"></i> Productos
         </button>
